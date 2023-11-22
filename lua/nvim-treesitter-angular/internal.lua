@@ -6,11 +6,11 @@ local M = {}
 function M.init()
   parsers.get_parser_configs().angular = {
     install_info = {
-      url = "https://github.com/steelsojka/tree-sitter-angular",
+      url = "https://github.com/dlvandenberg/tree-sitter-angular",
       files = { "src/parser.c" },
       branch = "main",
     },
-    maintainers = { "@steelsojka" },
+    maintainers = { "@dlvandenberg" },
   }
 
   if not parsers.has_parser("angular") then
