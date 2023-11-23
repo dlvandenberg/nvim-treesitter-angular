@@ -34,3 +34,20 @@
 (attribute
   ((attribute_name) @_name
    (#lua-match? @_name "^%*.*")) @keyword)
+
+
+[
+ "{{",
+ "}}",
+ "(",
+ ")",
+ "[",
+ "]",
+ "{",
+ "}"
+ ] @punctuation.bracket
+
+[
+ (special_block_keyword)
+ (as)
+] @keyword
