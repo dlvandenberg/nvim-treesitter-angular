@@ -8,7 +8,7 @@ function M.init()
     install_info = {
       url = "https://github.com/dlvandenberg/tree-sitter-angular",
       files = { "src/parser.c" },
-      branch = "main",
+      branch = "feat-control-flow",
     },
     maintainers = { "@dlvandenberg" },
   }
