@@ -29,3 +29,18 @@
 ((text) @angular
   (#lua-match? @angular "%@if.*%(.*%).*%{")
 )
+
+; } @else if () {
+((text) @angular
+  (#lua-match? @angular "%}.*@else.*if.*%(.*%).*%{")
+)
+
+; } @else {
+((text) @angular
+  (#lua-match? @angular "%}.*@else.*%{")
+)
+
+; }
+((text) @angular
+  (#lua-match? @angular "%}")
+)
