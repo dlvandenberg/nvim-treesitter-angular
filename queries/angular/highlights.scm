@@ -21,9 +21,12 @@
   function: ((identifier) @function.builtin
     (#eq? @function.builtin "$any")))
 
+(annotation) @decorator
+
 [
-"let"
-"as"
+  (special_block_keyword)
+  "let"
+  "as"
 ] @keyword
 
 [
