@@ -37,17 +37,13 @@
 
 
 [
- "{{",
- "}}",
- "(",
- ")",
- "[",
- "]",
- "{",
+ "{{"
+ "}}"
+ "("
+ ")"
+ "["
+ "]"
+ "{"
  "}"
  ] @punctuation.bracket
 
-[
- (special_block_keyword)
- (as)
-] @keyword
