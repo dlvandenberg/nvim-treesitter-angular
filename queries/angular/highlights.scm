@@ -24,9 +24,11 @@
 (annotation) @decorator
 
 [
-  (special_block_keyword)
+  (control_flow_keyword)
   "let"
 ] @keyword
+
+(special_block_keyword) @type
 
 [
 "("
