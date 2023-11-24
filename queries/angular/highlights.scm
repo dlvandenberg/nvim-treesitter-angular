@@ -26,7 +26,6 @@
 [
   (special_block_keyword)
   "let"
-  "as"
 ] @keyword
 
 [

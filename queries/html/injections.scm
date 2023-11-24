@@ -20,10 +20,11 @@
     ((attribute_value) @angular)))
 
 ; {{ someBinding }}
-(element
+; (element
   ((text) @angular
    (#lua-match? @angular "%{%{.*%}%}")
-   (#offset! @angular 0 2 0 -2)))
+  )
+   ; (#offset! @angular 0 2 0 -2)))
 
 ;@if () {}
 ((text) @angular
