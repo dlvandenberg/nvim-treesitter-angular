@@ -29,7 +29,7 @@
 ((text) @angular (#match? @angular "\@(if|for|switch|defer|case|default)"))
 
 ; catch-all for any angular continuation block (else / empty / case / default / placeholder / loading / error) 
-((text) @angular (#match? @angular "\} \@(else|empty|placeholder|loading|error)"))
+((text) @angular (#match? @angular "^\}.\@(else|empty|placeholder|loading|error)"))
 
 ; ;; if-statement
 ; ;@if () {}
