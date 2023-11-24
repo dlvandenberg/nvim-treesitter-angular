@@ -20,16 +20,26 @@
     ((attribute_value) @angular)))
 
 ; {{ someBinding }}
-; ((text) @angular (#match? @angular "\{\{.+\}\}"))
+((text) @angular (#lua-match? @angular "%{%{.+%}%}"))
 
 ; }
-; ((text) @angular (#match? @angular "^\}$"))
+((text) @angular (#lua-match? @angular "^%}$"))
 
-; catch-all for any angular syntax block (if / for / switch / defer)
-((text) @angular (#vim-match? @angular "\@(if|for|switch|defer|case|default)"))
+; Angular control flow statements
+((text) @angular (#lua-match? @angular "^%@if"))
+((text) @angular (#lua-match? @angular "^%@for"))
+((text) @angular (#lua-match? @angular "^%@switch"))
+((text) @angular (#lua-match? @angular "^%@defer"))
+((text) @angular (#lua-match? @angular "^%@case"))
+((text) @angular (#lua-match? @angular "^%@default"))
 
-; catch-all for any angular continuation block (else / empty / case / default / placeholder / loading / error) 
-; ((text) @angular (#match? @angular "^\}.\@(else|empty|placeholder|loading|error)"))
+; Angular continuation blocks
+((text) @angular (#lua-match? @angular "^%}%s+%@else"))
+((text) @angular (#lua-match? @angular "^%}%s+%@else"))
+((text) @angular (#lua-match? @angular "^%}%s+%@empty"))
+((text) @angular (#lua-match? @angular "^%}%s+%@placeholder"))
+((text) @angular (#lua-match? @angular "^%}%s+%@loading"))
+((text) @angular (#lua-match? @angular "^%}%s+%@error"))
 
 ; ;; if-statement
 ; ;@if () {}
