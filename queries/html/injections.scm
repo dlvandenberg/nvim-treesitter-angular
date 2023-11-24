@@ -26,7 +26,7 @@
 ; ((text) @angular (#match? @angular "^\}$"))
 
 ; catch-all for any angular syntax block (if / for / switch / defer)
-((text) @angular (#match? @angular "\@(if|for|switch|defer|case|default)"))
+((text) @angular (#lua-match? @angular "%@(if|for|switch|defer|case|default)"))
 
 ; catch-all for any angular continuation block (else / empty / case / default / placeholder / loading / error) 
 ; ((text) @angular (#match? @angular "^\}.\@(else|empty|placeholder|loading|error)"))
