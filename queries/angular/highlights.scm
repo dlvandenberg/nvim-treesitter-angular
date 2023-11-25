@@ -68,4 +68,5 @@
   "/"
   "||"
   "%"
+  (ternary_operator)
 ] @operator

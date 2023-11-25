@@ -30,9 +30,12 @@
 ((text) @angular (#lua-match? @angular "^%@if%s+%(.+%)%s+%{$"))
 ; @for (item of items) {
 ((text) @angular (#lua-match? @angular "^%@for%s+%(.+%)%s+%{$"))
-; ((text) @angular (#lua-match? @angular "^%@switch"))
-; ((text) @angular (#lua-match? @angular "^%@default"))
-; ((text) @angular (#lua-match? @angular "^%@case"))
+; @switch (condition) {
+((text) @angular (#lua-match? @angular "^%@switch%s+%(.+%)%s+%{$"))
+; @case (value) {
+((text) @angular (#lua-match? @angular "^%@case%s+%(.+%)%s+%{$"))
+; @default {
+((text) @angular (#lua-match? @angular "^%@default%s+%{$"))
 ; @defer {
 ((text) @angular (#lua-match? @angular "^%@defer%s+%{$"))
 ; @defer (conditions) {
